@@ -131,8 +131,8 @@ if __name__ == "__main__":
     # If going to save the images, select where
     SAVE_TYPE = '.png' #<-- GIF is not available
     
-    MY_BOROUGH = 'images/my_borough' + SAVE_TYPE
-    ALL_BOROUGHS = 'images/all_boroughs' + SAVE_TYPE
+    MY_BOROUGH = 'docs/images/my_borough' + SAVE_TYPE
+    ALL_BOROUGHS = 'docs/images/all_boroughs' + SAVE_TYPE
 
     if not SAVE_IMAGE:
         MY_BOROUGH, ALL_BOROUGHS = None, None
