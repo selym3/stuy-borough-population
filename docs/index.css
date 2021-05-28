@@ -1,0 +1,128 @@
+/* include fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;600&display=swap');
+
+:root {
+
+    --pink: #f7868c;
+    --blue: #66a1ff; 
+    --gray: darkgray;
+
+    --navbar-color: var(--blue);
+    --heading-color: var(--gray);
+
+    /* everything will be centered */
+    --navbar-width: 52.5%;
+    --content-width: 50%;
+
+    /* some mobile settings */
+    --navbar-width-mobile: 90%;
+    --content-width-mobile: 85%;
+
+}
+
+@media only screen and (max-width: 1024px) {
+    #navbar { width: var(--navbar-width-mobile)  !important; }
+    #content { width: var(--content-width-mobile) !important; }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Lato', sans-serif;
+}
+
+
+#navbar-background {
+    background-color: var(--navbar-color);
+    width: 100vw;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px gray;
+}
+
+#navbar {
+    width: var(--navbar-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#navbar .element {
+    margin: 0 15px;
+}
+
+#navbar .title {
+    font-size: 187.5%;
+    user-select: none;
+    font-weight: bold;
+}
+
+#navbar .link {
+    font-size: 90%;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.7;
+}
+
+.selected, #navbar .link:hover {
+    text-shadow: 0 0.5px gray;
+    opacity: 1 !important;
+}
+
+#navbar .link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#content {
+
+    margin: 15px 5px;
+    /* max-width: 1200px; */
+    width: var(--content-width);
+    /* border-right: 3px solid black; */
+
+    margin: 0 auto;
+}
+
+#content .text {
+    margin: 6px 0;
+}
+
+#content .text.column {
+    column-count: 2;
+}
+
+#content .text.indented {
+    text-indent: 15px;
+}
+
+#content .heading, #content .subheading {
+    font-size: 250%;
+    color: var(--heading-color);
+    margin: 7.5px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+#content .subheading {
+    font-size: 190% !important;
+}
+
+#content .image {
+    margin: 15px 0;
+    /* width: 600px; */
+    max-width: 600px;
+}
+
+#content .image img {
+    /* width: 50vw ; */
+    width: 100%;
+    box-shadow: 0 1px 3px gray;
+}
+
+
+#content .image .caption {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 85%;
+}
