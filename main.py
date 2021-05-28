@@ -77,7 +77,7 @@ class CityManager:
             label=f'{borough}'
         )
 
-    def graph_boroughs(self, boroughs=None, savefile=None):
+    def graph_boroughs(self, boroughs=None, savefile=None, show=True):
         boroughs = self.boroughs if boroughs is None else boroughs
 
         for borough in boroughs:
@@ -94,7 +94,8 @@ class CityManager:
         if savefile is not None:
             plt.savefig(savefile, dpi=300, bbox_inches='tight')
 
-        plt.show()
+        if show:
+            plt.show()
 
 if __name__ == "__main__":
 
@@ -104,6 +105,8 @@ if __name__ == "__main__":
     MY_BOROUGH = 'images/my_borough' + SAVE_TYPE
     ALL_BOROUGHS = 'images/all_boroughs' + SAVE_TYPE
     
+    SHOW_PLOT = True
+
     # Parse the CSV file
     CSV_PATH = "resources/nyc-population.csv"
     
@@ -117,7 +120,8 @@ if __name__ == "__main__":
 
     manager.graph_boroughs(
         boroughs=[my_borough],
-        savefile=MY_BOROUGH
+        savefile=MY_BOROUGH,
+        show=SHOW_PLOT
     )
 
     '''
@@ -127,5 +131,6 @@ if __name__ == "__main__":
     # passing in none handles all boroughs
 
     manager.graph_boroughs(
-        savefile=ALL_BOROUGHS
+        savefile=ALL_BOROUGHS,
+        show=SHOW_PLOT
     )
