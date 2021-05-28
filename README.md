@@ -4,7 +4,7 @@ Stuyvesant AnnualCs matplotlib assignment
 
 ## Homework
 
-Here are the [/nyc-population.csv](population statistics) for the NYC Boroughs from 1790 until 2010.
+Here are the [population statistics](/nyc-population.csv) for the NYC Boroughs from 1790 until 2010.
 
 Q1. Choose a borough, and create a normal line plot of its population from 1790 to 2010.  Label axes, title, etc.  Save the graph as a .GIF file.
 
